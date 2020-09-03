@@ -9,42 +9,107 @@ body {
 }
 
 .container {
-    height: 300px;
-    width: 800px;
+    height: 270px;
+    width: 700px;
     border-radius: 15px;
     background: #ffffff;
     display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     overflow: hidden;
+    z-index: 1;
 }
 .main-image {
     margin: 0;
+    padding-right:35px ;
 }
 
 .main-image img {
-    width: 360px;
-    height: 300px;
+    width: 290px;
+    height: 280px;
 }
 
 .main-content {
-    display: block;
+    padding-top: 20px;
 }
-.main-content p {
-    font-size: 10px;
+
+.main-content .main-title, 
+.main-content .main-text {
+    padding-right: 40px;
+}
+
+.main-content .main-text p {
+    color: #595959;
+    font-size:12.5px;
+    line-height: 20px;
     margin: 0;
 }
+.main-content .main-title h1 {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 500;
+}
+.main-content .main-text p br,
+.main-content .main-title h1 br {
+    display: none;
+}
+
+
 .footer-container {
-   display: flex
-    /* grid-template-rows:repeat(2 ,1fr) ; */
+   display: flex;
+   padding-top: 10px;
+   align-items: center;
 }
 
 .footer-img img {
     width: 50px;
 }
 
+.footer-text-container {
+    width:270px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding-top: 10px; */
+}
+.footer-text {
+    padding-top: 10px;
+}
 
+
+
+.footer-text h6 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 12px;
+}
+.footer-text p {
+    margin-left: 0;
+    margin-top: 0;
+    color: #798490;
+    font-size: 12px;
+}
+.footer-img {
+    padding: 15px 15px 0 0px;
+    margin: 0;
+}
+.footer-img img {
+    width: 40px;
+    margin-bottom: 15px ;
+    border-radius: 100%;
+}
+.shareBtn-container {
+    padding-bottom: 10px;
+}
+.shareBtn {
+    border-radius: 100%;
+    padding: 8px;
+    border: none;
+}
+
+
+.shareBtn i img {
+    width: 15px;
+    height: 14px;
+}
 
 @media screen and (max-width:1023px) {
     body {
@@ -64,6 +129,7 @@ body {
         background: #ffffff;
     }
     .main-image {
+        padding: 0;
         margin: 0;
     }
     .main-image img {
@@ -72,6 +138,7 @@ body {
         margin: 0;
     }
     .main-content{
+        padding: 0;
         margin: 15px 10px 0 10px;
         display: flex;
         flex-direction: column;
@@ -80,64 +147,56 @@ body {
         
         /* text-align: center; */
     }
-    .main-content h2 {
+
+    .main-content .main-title {
+        padding-right:0
+    }
+    
+    .main-content .main-text {
+        padding-right:0;
+    }
+    .main-content .main-text p br,
+    .main-content .main-title h1 br {
+    display: block;
+}
+    .main-content .main-title h1 {
         margin-left: 10px;
         text-align: left;
         font-size: 15px;
         line-height:20px;
-        font-weight: 500;
     }
-    .main-content p {
+    .main-content .main-text p {
         margin-left: 10px;
         margin-top: 0;
-        color: #798490;
         font-size: 12px;
         /* text-align: left; */
     }
-    .footer-container {
-        display: flex;
-        padding-top: 20px;
-        /* margin-right: 40px; */
-        align-items: center;
-        /* text-align: center; */
-        /* justify-content: ce ; */
-    }
+    
     .footer-img {
+        padding: 0;
         margin: 0 15px 0 10px;
     }
-    .footer-img img {
-        width: 40px;
-        margin-bottom: 15px ;
-        border-radius: 100%;
-    }
+
     .footer-text-container {
         width: 180px;
         display: flex;
         justify-content: space-between;
-        margin: auto 0;
+        margin: 10px 0;
         margin-top: 5px;
     }
-    
-    .footer-text h6 {
-        margin: 0;
-        font-weight: 600;
-        font-size: 12px;
+
+    .footer-text {
+        padding-top: 0;
     }
-    .footer-text p {
-        margin-left: 0;
-        margin-top: 0;
-        color: #798490;
-        font-size: 12px;
+
+    .shareBtn-container {
+        padding-bottom: 15px;
     }
 
     .shareBtn {
-        border-radius: 100%;
-        padding: 10px;
-        border: none;
+        padding: 7px;
     }
-
-    .shareBtn img {
-        width: 15px;
-    }
+    
+    
     
 }
